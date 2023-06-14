@@ -6,14 +6,24 @@ import "./Detalle.css"
 const Detalle = () => {
   const { idPais } = useParams()
   const [pais, setPais] = useState({});
+  const [arrayLeng, setArrayLeng] = useState([]);
+  let arrayLenguajes = [];
 
   useEffect(() => {
     const getPaisbyId = async () => {
 
     await axios.get(`${process.env.REACT_APP_BACK_URL}/paises/pais/${idPais}`).then(
           (resp) => {
-            console.log(resp)
+            // console.log(resp)
             setPais(resp.data)
+            
+            for (const key in resp.data.languages) {
+              console.log('lenguaje rec:',resp.data.languages[key])
+              arrayLenguajes.push(resp.data.languages[key]);
+              console.log('lenguaje tot:', arrayLenguajes)
+            }
+
+            setArrayLeng(arrayLenguajes);
           },
           (resp) => {
             // console.log(resp.response.data);
@@ -43,6 +53,7 @@ const Detalle = () => {
                 <p className="bigcard-p">Poblacion: {pais.population}</p>
                 <p className="bigcard-p">Independiente: {pais.independent ? 'Si' : 'No'}</p>
                 <p className="bigcard-p">Fronteras con: {pais.borders.map((eachborder) => eachborder + ' ' )  }</p>
+                <p className="bigcard-p">lenguajes oficiales: {arrayLeng.map((eachLang) => eachLang + ' ' ) }</p>
 
             </li>
         </ul>
