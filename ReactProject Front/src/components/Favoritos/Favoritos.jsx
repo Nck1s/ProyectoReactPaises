@@ -81,7 +81,7 @@ const Favoritos = (id) => {
               
               <div className="flagcard-div_buttons">
                  
-                 <Link to={`/detalle/${character._id}`} className="flagcard-hiper">Detalle</Link>
+                 <Link to={`/detalle/${character.paisfav._id}`} className="flagcard-hiper">Detalle</Link>
 
                  <button onClick={() => {
                     delFavorite(character._id)}} className="flagcard-button">Eliminar Favorito</button>
