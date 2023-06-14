@@ -9,9 +9,11 @@ import "./Listado.css"
 const Listado = () => {
 
   const [filtroContinente, setfiltroContinente] = useState('');
+  const [filtroBusqueda, setfiltroBusqueda] = useState('');
   const [paises, setPaises] = useState([]);
   const [paisesContinente, setPaisesContinente] = useState([]);
   const [filtroPaises, setFiltroPaises] = useState([]);
+  
 
   const addFavorite = async (id) => {
     let responseStatus = 0;
@@ -62,7 +64,7 @@ const Listado = () => {
           (eachPais.namecommon.toLowerCase().includes(ev.target.value.toLowerCase()))
         )  
      }
-
+     setfiltroBusqueda(ev.target.value);
      setFiltroPaises ([...paisesFiltrados]     )  
  } 
 
@@ -107,9 +109,8 @@ const Listado = () => {
   }
 
   return (
-    <div >
-      {filtroPaises.length ? (
-        <>
+    <>
+      <div >
         <div className="filter-div">
         <label htmlFor="filtro"> 
         <h3 className="filter-h">Filtro por Pais </h3></label>
@@ -126,9 +127,12 @@ const Listado = () => {
           <option value="Antarctica">Antarctica</option>
         </select>
         </div>
-        
+      
         <br />
-
+      </div>
+      <div>
+      {filtroPaises.length ? (
+        <>
         <ul className="container">
           {filtroPaises.map((character, i) => (
             <li key={i} className="flagcard">
@@ -149,12 +153,22 @@ const Listado = () => {
         </ul>
         </>
       ) : (
-        <div className="charge">
+        <>
+        { filtroBusqueda ? 
+          <div className="charge">
+             <h1 className="filter-h1">No existen países con el patrón informado</h1>
+           </div>
+          :
+          <div className="charge">
            <img src="./GIF_Mundo_Banderas.gif"alt='loading' className="chargegif"/>
            <h1>Buscando tus países</h1>
         </div>
+        }
+        </>
+       
       )}
     </div>
+    </>
   )
 }
 

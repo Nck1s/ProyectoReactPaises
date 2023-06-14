@@ -18,9 +18,9 @@ const Detalle = () => {
             setPais(resp.data)
             
             for (const key in resp.data.languages) {
-              console.log('lenguaje rec:',resp.data.languages[key])
+              // console.log('lenguaje rec:',resp.data.languages[key])
               arrayLenguajes.push(resp.data.languages[key]);
-              console.log('lenguaje tot:', arrayLenguajes)
+              // console.log('lenguaje tot:', arrayLenguajes)
             }
 
             setArrayLeng(arrayLenguajes);

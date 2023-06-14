@@ -17,6 +17,16 @@
    
 }
 
+.filter-h1{
+    background-color:rgba(116, 89, 60, 0.45);
+    width: 600px;
+    margin: 5px;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: -350px;
+}
+
 .countriesfilter{
     margin: 5px;
     border-radius: 10px;
