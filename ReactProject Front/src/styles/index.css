@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+

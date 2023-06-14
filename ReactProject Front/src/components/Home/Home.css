@@ -1,0 +1,18 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 150px;
+}
+
+.home-h{
+    background-color:rgba(116, 89, 60, 0.45);
+    width: 500px;
+    margin: 5px;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 5px;
+}
+

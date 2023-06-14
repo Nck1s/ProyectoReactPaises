@@ -1,0 +1,109 @@
+
+.filter-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    margin: 20px;
+}
+
+.filter-h{
+    background-color:rgba(116, 89, 60, 0.45);
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid black;
+   
+}
+
+.countriesfilter{
+    margin: 5px;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+}
+
+.continentes{
+    margin: 5px;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+}
+
+.container {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 0.25fr));
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flagcard{
+    width: 300px;
+    height: 250px;
+    background-color: rgba(116, 89, 60, 0.75);
+    border-radius: 25px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.flagcard-image_box {
+    width: 220px;
+    height: 110px;
+}
+
+.flagcard-image{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+   
+}
+
+.flagcard-h2{
+    font-size: 24px;
+}
+
+.flagcard-p{
+    font-size: 20px;
+}
+
+.flagcard-button{
+    width: 150px;
+    height: 30px;
+    margin: 2px;
+    gap:5px;
+    border-radius: 15px;
+}
+
+.flagcard-hiper{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    width: 150px;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: small;
+}
+
+.charge{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.chargegif{
+    width: 350px;
+    height: 350px;
+    margin-top: -75px;
+}
